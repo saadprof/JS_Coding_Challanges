@@ -25,12 +25,45 @@ console.log(dolphineAvg, koalaAvg);
 
 const checkWinner = (dolphineAvg, koalaAvg) => {
     if (dolphineAvg > koalaAvg) {
-        console.log(`Dolphines got ${dolphineAvg} scores than koalas ${koalaAvg}. Dolphines wins.!!!`);
+        console.log(
+            `Dolphines got ${dolphineAvg} scores than koalas ${koalaAvg}. Dolphines wins.!!!`,
+        );
     } else if (koalaAvg > dolphineAvg) {
-        console.log(`Koalas got higher score ${koalaAvg} than dolphines ${dolphineAvg}. Koalas Won!`);
+        console.log(
+            `Koalas got higher score ${koalaAvg} than dolphines ${dolphineAvg}. Koalas Won!`,
+        );
     }
 };
 
 checkWinner(dolphineAvg, koalaAvg);
 
+console.log(
+    "------------- Coding Challange #2: Tip calculator using array ----------",
+);
+const bills = [125, 555, 44, 97];
+const tips = [];
+const totals = [];
 
+const calcTip = function (billValue) {
+    let tip = 0;
+    let total = 0;
+
+    if (billValue > 300) {
+        tip = billValue * 0.2;
+        total = billValue + tip;
+    } else if (billValue >= 50 && billValue <= 300) {
+        tip = billValue * 0.15;
+        total = billValue + tip;
+    } else {
+        tip = 0;
+        total = billValue + tip;
+    }
+    tips.push(tip);
+    totals.push(total);
+};
+
+calcTip(bills[0]);
+calcTip(bills[1]);
+calcTip(bills[2]);
+
+console.log(tips, totals);
