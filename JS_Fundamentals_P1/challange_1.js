@@ -60,7 +60,7 @@ if (calcDolphinAverage > 100 && calcDolphinAverage > calcKoalaAverage) {
 }
 
 console.log(
-    "------------------- Coding Challange #3: Let's create a tip calculator ---------------",
+    "------------------- Coding Challange #4: Let's create a tip calculator ---------------",
 );
 // Lets make this project with plain if/else and also with ternary operator.
 const billValue = 275;
