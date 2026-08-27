@@ -34,3 +34,23 @@ if (markBMI > johnBMI) {
         `Johns BMI is ${johnBMI}, absolutely higher than Marks BMI ${markBMI}`,
     );
 }
+
+console.log(
+    "-------------- Coding Challange #3: Competition Winner -----------------",
+);
+const calcDolphinAverage = (96 + 108 + 89) / 3;
+// const calcDolphinAverage = (97 + 112 + 101) / 3;
+// const calcDolphinAverage = (97, 112, 101) / 3;
+
+const calcKoalaAverage = (88 + 91 + 110) / 3;
+// const calcKoalaAverage = (109 + 95 + 123) / 3;
+// const calcKoalaAverage = (109 + 95 + 106) / 3;
+
+console.log(calcDolphinAverage, calcKoalaAverage);
+if(calcDolphinAverage > 100 && calcDolphinAverage > calcKoalaAverage){
+    console.log(`Yey! Dolphine scored ${calcDolphinAverage}. Wins over Koalas.`);
+} else if(calcKoalaAverage > 100 && calcKoalaAverage > calcDolphinAverage){
+    console.log(`Koala scored ${calcKoalaAverage} and they won.`);
+} else{
+    console.log(`Both team scored below the requirement point 100. Doesn't qualify for the competition.`);
+}
