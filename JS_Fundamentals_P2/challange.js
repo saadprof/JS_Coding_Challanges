@@ -67,3 +67,26 @@ calcTip(bills[1]);
 calcTip(bills[2]);
 
 console.log(tips, totals);
+
+console.log(
+    "---------- Coding Chllange #3: Calculate BMI with Object ---------",
+);
+const markObj = {
+    name: "Mark",
+    mass: 78, // kg
+    height: 1.69, // meter
+    calcBMI: function () {
+        const BMI = this.mass / this.height ** 2;
+        return BMI;
+    },
+};
+const johnObj = {
+    name: "John",
+    mass: 92, // kg
+    height: 1.95, // meter
+    calcBMI: function () {
+        const BMI = this.mass / this.height ** 2;
+        return BMI;
+    },
+};
+
