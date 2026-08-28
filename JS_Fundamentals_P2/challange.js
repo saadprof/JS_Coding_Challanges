@@ -102,3 +102,36 @@ if (markObj.BMI > johnObj.BMI) {
         `Johns BMI ${johnObj.BMI} is higher than Marks BMI ${markObj.BMI}`,
     );
 }
+
+console.log(
+    "---------- Coding challange #4: tip calculator using array and loop ---------",
+);
+
+const billValue = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips4 = [];
+const totals4 = [];
+
+// Automate this repetetive task with for loop.
+const calcTip4 = function (billValue) {
+    let tip = 0;
+    let total = 0;
+
+    if (billValue > 300) {
+        tip = billValue * 0.2;
+        total = billValue + tip;
+    } else if (billValue >= 50 && billValue <= 300) {
+        tip = billValue * 0.15;
+        total = billValue + tip;
+    } else {
+        tip = 0;
+        total = billValue + tip;
+    }
+    tips4.push(tip);
+    totals4.push(total);
+};
+
+for (let i = 0; i < billValue.length; i++) {
+    // console.log(billValue[i]);
+    calcTip4(billValue[i]);
+}
+console.log(tips4, totals4);
