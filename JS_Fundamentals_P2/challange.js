@@ -89,4 +89,16 @@ const johnObj = {
         return BMI;
     },
 };
+// Set BMI value on object via calling the calcBMI() method.
+markObj["BMI"] = markObj.calcBMI();
+johnObj["BMI"] = johnObj.calcBMI();
 
+if (markObj.BMI > johnObj.BMI) {
+    console.log(
+        `Marks BMI ${markObj.BMI} is higher than Johns BMI ${johnObj.BMI}`,
+    );
+} else {
+    console.log(
+        `Johns BMI ${johnObj.BMI} is higher than Marks BMI ${markObj.BMI}`,
+    );
+}
