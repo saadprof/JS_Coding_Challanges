@@ -20,8 +20,20 @@
     if any name matches with name the defined name the game will start,
     else, on wrong player name, empty will as again and again to input
 */
-const playerName = prompt(`What player you are playing with? 
+let playerInput = prompt(`What player you are playing with? 
     -------------------------------------------------------------------
     Warrick             ||        Kain              ||         Marshall
-    ------------------------------------------------------------------
-    "Please type the character name"`)
+    -------------------------------------------------------------------
+    "Please type the character name"`);
+let playerName = ["warrick", "kain", "marshall"];
+
+// console.log(playerInput);
+// console.log(playerName.includes(playerInput) === true);
+
+while (playerInput === null || playerInput === undefined || playerName.includes(playerInput) !== true) {
+    playerInput = prompt(`What player you are playing with? 
+    -------------------------------------------------------------------
+    Warrick             ||        Kain              ||         Marshall
+    -------------------------------------------------------------------
+    "Please type the correct name"`);
+}
