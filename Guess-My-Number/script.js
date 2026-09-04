@@ -1,8 +1,8 @@
 "use strict";
 const againBtn = document.querySelector(".again");
 const checkBtn = document.querySelector(".check");
-let score = Number(document.querySelector(".score").textContent);
-let highScore = Number(document.querySelector(".highscore").textContent);
+let score = document.querySelector(".score");
+let highScore = document.querySelector(".highscore");
 let displayMessage = document.querySelector(".message");
 let number = document.querySelector(".number");
 
@@ -16,7 +16,6 @@ number.textContent = secretNum;
 
 checkBtn.addEventListener("click", function () {
     const inputGuess = Number(document.querySelector(".guess").value);
-    console.log(typeof inputGuess);
 
     if (score < 1) {
         displayMessage.textContent = "You've lost the game";
@@ -24,15 +23,20 @@ checkBtn.addEventListener("click", function () {
     }
 
     if (!inputGuess) {
-        displayMessage.textContent = "No number! Please input a number";
+        displayMessage.textContent = "No number! Please input a valid number";
         return;
     }
 
     if (inputGuess === secretNum) {
-        displayMessage.textContent = "Won";
+        displayMessage.textContent = "You've won the match";
+        highScore.textContent = score.textContent;
     } else if (inputGuess > secretNum) {
         displayMessage.textContent = "Number is lower than this";
+        score.textContent--;
+        score.textContent = score.textContent--;
     } else if (inputGuess < secretNum) {
         displayMessage.textContent = "Number is higher than this";
+        score.textContent--;
+        score.textContent = score.textContent--;
     }
 });
