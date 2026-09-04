@@ -9,7 +9,7 @@ let displayMessage = document.querySelector(".message");
 let randomNum = Math.trunc(Math.random() * 20) + 1;
 // console.log(randomNum);
 
-score = 1;
+// score = 1;
 // console.log(score);
 
 checkBtn.addEventListener("click", function () {
@@ -19,4 +19,9 @@ checkBtn.addEventListener("click", function () {
         displayMessage.textContent = "You've lost the game";
         return;
     }
+
+    if(!inputGuess){
+        displayMessage.textContent = "No number! Please input a number"
+        return;
+    } 
 });
