@@ -42,3 +42,15 @@ checkBtn.addEventListener("click", function () {
         score.textContent = score.textContent--;
     }
 });
+
+againBtn.addEventListener("click", function () {
+    score.textContent = 20;
+    displayMessage.textContent = "Start guessing...";
+
+    document.body.style.backgroundColor = "#222";
+    number.style.width = "15rem";
+
+    document.querySelector(".guess").value = "";
+
+    number.textContent = Math.trunc(Math.random() * 20) + 1;
+});
