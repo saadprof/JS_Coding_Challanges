@@ -30,6 +30,8 @@ checkBtn.addEventListener("click", function () {
     if (inputGuess === secretNum) {
         displayMessage.textContent = "You've won the match";
         highScore.textContent = score.textContent;
+        document.body.style.backgroundColor = "#60b347";
+        number.style.width = "30rem";
     } else if (inputGuess > secretNum) {
         displayMessage.textContent = "Number is lower than this";
         score.textContent--;
