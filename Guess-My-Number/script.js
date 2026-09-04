@@ -9,9 +9,14 @@ let displayMessage = document.querySelector(".message");
 let randomNum = Math.trunc(Math.random() * 20) + 1;
 // console.log(randomNum);
 
-// score = 0;
-console.log(score);
+score = 1;
+// console.log(score);
 
 checkBtn.addEventListener("click", function () {
     const inputGuess = document.querySelector(".guess").value;
+
+    if (score < 1) {
+        displayMessage.textContent = "You've lost the game";
+        return;
+    }
 });
