@@ -8,7 +8,6 @@ let number = document.querySelector(".number");
 
 // Random secret number generator
 let secretNum = Math.trunc(Math.random() * 20) + 1;
-number.textContent = secretNum;
 // console.log(randomNum);
 
 // score = 1;
@@ -29,9 +28,12 @@ checkBtn.addEventListener("click", function () {
 
     if (inputGuess === secretNum) {
         displayMessage.textContent = "You've won the match";
-        highScore.textContent = score.textContent;
         document.body.style.backgroundColor = "#60b347";
         number.style.width = "30rem";
+
+        if (score.textContent > highScore.textContent) {
+            highScore.textContent = score.textContent;
+        }
     } else if (inputGuess > secretNum) {
         displayMessage.textContent = "Number is lower than this";
         score.textContent--;
@@ -52,5 +54,5 @@ againBtn.addEventListener("click", function () {
 
     document.querySelector(".guess").value = "";
 
-    number.textContent = Math.trunc(Math.random() * 20) + 1;
+    secretNum = Math.trunc(Math.random() * 20) + 1;
 });
